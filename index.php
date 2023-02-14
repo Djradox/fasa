@@ -33,8 +33,6 @@ include 'elements/headerdisco.php';
 <!-- Body -->
 
 
-
-
 <!-- footer -->
 <?php
 if($_SESSION){
