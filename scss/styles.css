@@ -1,0 +1,71 @@
+nav.navbar {
+  padding: 0;
+}
+nav.navbar div.container-fluid.hdr #logo {
+  margin-top: 5px;
+  max-width: 25%;
+}
+nav.navbar div.container-fluid.hdr div.row {
+  width: 100vw;
+}
+nav.navbar div.container-fluid.hdr div.row div.menu {
+  padding: 0;
+}
+nav.navbar div.container-fluid.hdr div.row div.menu ul.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+nav.navbar div.container-fluid.hdr div.row div.menu ul.navbar-nav li.nav-item.menuitem {
+  padding-inline: 5%;
+  font-size: 20px;
+}
+nav.navbar div.container-fluid.hdr div.row div.menu ul.navbar-nav li.nav-item.menuitem--login a {
+  color: #0065fc;
+  font-size: 20px;
+}
+
+div.container-fluid.body .bdy img {
+  size: 100px;
+  margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+  li.nav-item.menuitem--login {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+  }
+}
+
+li.nav-item.menuitem--mainmenu {
+  color: #0065fc;
+}
+@media (max-width: 768px) {
+  li.nav-item.menuitem--mainmenu {
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid lightgray;
+  }
+  li.nav-item.menuitem--mainmenu:hover {
+    border-bottom: #0065fc solid 2px;
+  }
+}
+
+li.nav-item.menuitem--mainmenu {
+  color: #0065fc;
+}
+@media (min-width: 768px) {
+  li.nav-item.menuitem--mainmenu:hover {
+    border-top: #0065fc solid 2px;
+  }
+}
+
+li.nav-item.menuitem--login {
+  color: #0065fc;
+}
+@media (min-width: 768px) {
+  li.nav-item.menuitem--login:hover {
+    border-top: #0065fc solid 2px;
+  }
+}/*# sourceMappingURL=styles.css.map */
