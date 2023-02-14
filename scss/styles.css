@@ -25,9 +25,11 @@ nav.navbar div.container-fluid.hdr div.row div.menu ul.navbar-nav li.nav-item.me
   font-size: 20px;
 }
 
-div.container-fluid.body .bdy img {
-  size: 100px;
-  margin-top: 50px;
+div.container-fluid.body {
+  margin-top: 5rem;
+}
+div.container-fluid.body .bd-highlight {
+  height: 30rem;
 }
 
 @media (max-width: 768px) {

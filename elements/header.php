@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-4 logo">
                 <a class="nav-brand-img" href="#">
-                    <img src="images/asalogo.png" alt="logo" id="logo" title="BEST CUSTOMS AGENT IN CALAIS">
+                    <img src="images/asalogo.png" alt="logo" id="logo" title="ASA Social network">
                 </a>
             </div>
             <div class="col-md-8 menu">
@@ -11,12 +11,18 @@
                     <li class="nav-item menuitem menuitem--mainmenu">
                         <a class="nav-link" href="#">Accueil </a>
                     </li>
-                    <!-- <li class="nav-item menuitem menuitem--mainmenu">
-                        <a class="nav-link" href="/train/pages/mur.php">Mon Mur </a>
-                    </li> -->
-                    <li class="nav-item menuitem menuitem--login">
-                        <a class="nav-link" href="/train/pages/connexion.php">Espace membre </a>
-                    </li>
+                    <?php if($_SESSION) : ?>
+                        <li class="nav-item menuitem menuitem--mainmenu">
+                            <a class="nav-link" href="/train/pages/mur.php">Mon Mur </a>
+                        </li>
+                        <li class="nav-item menuitem menuitem--login">
+                            <a class="nav-link" href="/train/pages/deconnexion.php">Se déconnecter </a>
+                        </li>
+                    <?php else : ?>
+                        <li class="nav-item menuitem menuitem--login">
+                            <a class="nav-link" href="/train/pages/connexion.php">Espace membre </a>
+                        </li>
+                    <?php endif; ?>
                 </ul>
             </div>
         </div>

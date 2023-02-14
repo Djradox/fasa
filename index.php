@@ -19,19 +19,26 @@ $bdd = new PDO('mysql:host=localhost;dbname=espace_membre;charset=utf8','root','
 </head>
 
 <body>
-<!-- nav -->
-<?php 
-if(!$_SESSION){
-include 'elements/header.php';
-}
-else{
-include 'elements/headerdisco.php';
-}
-?>
+
+        <!-- nav -->
+        <?php 
+            include 'elements/header.php';
+        ?>
+        <!-- nav -->
 
 
-<!-- Body -->
+                    <!-- Body -->
+                    <div class="container-fluid body">
+                        
+                    <div class="d-flex flex-row bd-highlight mb-3">
+                    
+                    <div class="p-2 col-4 bd-highlight">Flex item 1</div>
 
+                    <div class="p-2 col-4 bd-highlight">Flex item 2</div>
+                    <div class="p-2 col-4 bd-highlight">Flex item 3</div>
+                    </div>
+                    </div>
+                    <!-- Body -->
 
 <!-- footer -->
 <?php
@@ -40,9 +47,11 @@ echo $_SESSION['username'];
 }
 else
 ?>
-
+<!-- footer -->
 
 <!-- Bootstrap js bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<!-- Bootstrap js bundle -->
+
 </body>
 </html>
