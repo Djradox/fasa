@@ -3,7 +3,7 @@ nav.navbar {
 }
 nav.navbar div.container-fluid.hdr #logo {
   margin-top: 5px;
-  max-width: 25%;
+  max-width: 35%;
 }
 nav.navbar div.container-fluid.hdr div.row {
   width: 100vw;
@@ -19,17 +19,11 @@ nav.navbar div.container-fluid.hdr div.row div.menu ul.navbar-nav {
 nav.navbar div.container-fluid.hdr div.row div.menu ul.navbar-nav li.nav-item.menuitem {
   padding-inline: 5%;
   font-size: 20px;
+  padding-top: 5px;
 }
 nav.navbar div.container-fluid.hdr div.row div.menu ul.navbar-nav li.nav-item.menuitem--login a {
   color: #0065fc;
   font-size: 20px;
-}
-
-div.container-fluid.body {
-  margin-top: 5rem;
-}
-div.container-fluid.body .bd-highlight {
-  height: 30rem;
 }
 
 @media (max-width: 768px) {
@@ -70,4 +64,18 @@ li.nav-item.menuitem--login {
   li.nav-item.menuitem--login:hover {
     border-top: #0065fc solid 2px;
   }
+}
+
+div.container-fluid.body {
+  margin-top: 4rem;
+}
+div.container-fluid.body .bd-highlight {
+  border: 1px solid #f1f1f1;
+  background: #fff;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5), 0 15px 5px 0 rgba(0, 0, 0, 0.24);
+  height: 40rem;
+}
+
+p.indexcard {
+  font-size: 30px;
 }/*# sourceMappingURL=styles.css.map */

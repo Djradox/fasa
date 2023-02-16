@@ -1,6 +1,11 @@
 <!-- Session -->
 <?php
 session_start();
+require 'vendor/autoload.php';
+Carbon\Carbon::setLocale('fr_FR');
+$date = Carbon\Carbon::now();
+$date->subDays(5);
+// echo $date->diffForHumans();
 $bdd = new PDO('mysql:host=localhost;dbname=espace_membre;charset=utf8','root','root');
 ?>
 <!-- Session -->
@@ -14,7 +19,7 @@ $bdd = new PDO('mysql:host=localhost;dbname=espace_membre;charset=utf8','root','
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="/train/scss/styles.css">
+    <link rel="stylesheet" href="/scss/styles.css?v=<?= time(); ?>">
     <title>FASA</title>
 </head>
 
@@ -29,15 +34,19 @@ $bdd = new PDO('mysql:host=localhost;dbname=espace_membre;charset=utf8','root','
 
                     <!-- Body -->
                     <div class="container-fluid body">
-                        
-                    <div class="d-flex flex-row bd-highlight mb-3">
-                    
-                    <div class="p-2 col-4 bd-highlight">Flex item 1</div>
+                    <div class="row mb-3">
+                        <div class="p-2 m-4 mb-md-4 col-md-4 mx-auto d-flex justify-content-center align-items-center bd-highlight">
+                            <p class="indexcard">
+                                Bienvenue sur Fasa
+                            </p>
+                        </div>
+                        <div class="p-2 m-4 mb-md-4 col-md-4 mx-auto d-flex justify-content-center align-items-center bd-highlight">
+                            Flex item 2
+                        </div>
+                    </div> <!-- /.row -->
+                    </div>
 
-                    <div class="p-2 col-4 bd-highlight">Flex item 2</div>
-                    <div class="p-2 col-4 bd-highlight">Flex item 3</div>
-                    </div>
-                    </div>
+                    
                     <!-- Body -->
 
 <!-- footer -->

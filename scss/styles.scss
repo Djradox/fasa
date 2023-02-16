@@ -1,4 +1,4 @@
-// Index
+// @import 'bootstrap/bootstrap.scss';
 
 // Header logo & navbar
 nav.navbar{
@@ -6,7 +6,7 @@ nav.navbar{
     div.container-fluid.hdr{
         #logo {
             margin-top: 5px;
-            max-width: 25%;
+            max-width: 35%;
         }
         div.row{
             width: 100vw;
@@ -16,10 +16,10 @@ nav.navbar{
                     display: flex;
                     flex-direction: row;
                     justify-content: flex-end;
-
                     li.nav-item.menuitem{
                         padding-inline: 5%; 
                         font-size: 20px;
+                        padding-top: 5px;
                         // transform: scale(1);
                         // &:hover {
                         //     transform: scale(1.15);
@@ -34,59 +34,71 @@ nav.navbar{
         }
     }
 }
+                                    // media query 
+                                    li.nav-item.menuitem--login{
+                                        @media (max-width:768px) {
+                                            position: absolute;
+                                            top: 5px;
+                                            right: 10px;
+                                        }
+                                    }
+                                    li.nav-item.menuitem--mainmenu{
+                                        color: #0065fc;
+                                        @media (max-width:768px) {
+                                            width: 100%;
+                                            text-align: center;
+                                            border-bottom: 2px solid lightgray;
+                                            &:hover{
+                                            border-bottom: #0065fc solid 2px;
+                                        }
+                                        }
+                                    }
+                                    li.nav-item.menuitem--mainmenu{
+                                        color: #0065fc;
 
+                                        @media (min-width:768px) {
+                                            &:hover{
+                                                border-top: #0065fc solid 2px;
+                                        }
+                                        }
+                                    }
+                                    li.nav-item.menuitem--login{
+                                        color: #0065fc;
 
-div.container-fluid.body{
-    margin-top: 5rem;
-    // background-image: url(../images/fond2.jpg);
-    // background-repeat: no-repeat !important;
-    // background-size: cover !important;
-    // background-position: center;
-.bd-highlight {
-    // background-color: rgba(133, 133, 133, 0.15);
-    // border: 1px solid rgba(86,61,124,0.15);
-    height: 30rem;
-}
-}
+                                        @media (min-width:768px) {
+                                            &:hover{
+                                                border-top: #0065fc solid 2px;
+                                        }
+                                        }
+                                    }
+                                    // media query 
+// Header logo & navbar
 
+            // Body
+            div.container-fluid.body{
+                margin-top: 4rem;
+                // background-image: url(../images/social2.png);
+                // background-repeat: no-repeat !important;
+                // background-size: cover !important;
+                // background-position: center;
 
-// media query 
-li.nav-item.menuitem--login{
-    @media (max-width:768px) {
-        position: absolute;
-        top: 5px;
-        right: 10px;
-    }
-}
-li.nav-item.menuitem--mainmenu{
-    color: #0065fc;
-    @media (max-width:768px) {
-        width: 100%;
-        text-align: center;
-        border-bottom: 2px solid lightgray;
-        &:hover{
-        border-bottom: #0065fc solid 2px;
-    }
-    }
-}
-li.nav-item.menuitem--mainmenu{
-    color: #0065fc;
+            .bd-highlight {
+                // background-color: rgba(133, 133, 133, 0.15);
+                // border: 1px solid rgba(86,61,124,0.15);
+                border: 1px solid #f1f1f1;
+                background: #fff;
+                box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5), 0 15px 5px 0 rgba(0, 0, 0, 0.24);
+                height: 40rem;
+            }
+            }
 
-    @media (min-width:768px) {
-        &:hover{
-            border-top: #0065fc solid 2px;
-    }
-    }
-}
-li.nav-item.menuitem--login{
-    color: #0065fc;
+            div.row{
 
-    @media (min-width:768px) {
-        &:hover{
-            border-top: #0065fc solid 2px;
-    }
-    }
-}
+            }
+            p.indexcard{
+                
+                font-size: 30px;
+            }
 
-// Index
+            // Body
 

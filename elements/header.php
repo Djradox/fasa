@@ -13,14 +13,14 @@
                     </li>
                     <?php if($_SESSION) : ?>
                         <li class="nav-item menuitem menuitem--mainmenu">
-                            <a class="nav-link" href="/train/pages/mur.php">Mon Mur </a>
+                            <a class="nav-link" href="pages/mur.php">Mon Mur </a>
                         </li>
                         <li class="nav-item menuitem menuitem--login">
-                            <a class="nav-link" href="/train/pages/deconnexion.php">Se déconnecter </a>
+                            <a class="nav-link" href="pages/deconnexion.php">Se déconnecter </a>
                         </li>
                     <?php else : ?>
                         <li class="nav-item menuitem menuitem--login">
-                            <a class="nav-link" href="/train/pages/connexion.php">Espace membre </a>
+                            <a class="nav-link" href="pages/connexion.php">Espace membre </a>
                         </li>
                     <?php endif; ?>
                 </ul>

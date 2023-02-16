@@ -1,0 +1,17 @@
+{
+    "name": "g.tomassi/train",
+    "autoload": {
+        "psr-4": {
+            "GTomassi\\Train\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Gino Tomassi",
+            "email": "tomassigino@gmail.com"
+        }
+    ],
+    "require": {
+        "nesbot/carbon": "^2.66"
+    }
+}

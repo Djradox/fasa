@@ -11,7 +11,7 @@ $bdd = new PDO('mysql:host=localhost;dbname=espace_membre;charset=utf8','root','
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="/train/scss/styles2.css">
+    <link rel="stylesheet" href="/scss/styles2.css">
     <title>Connexion</title>
 </head>
 <body>
@@ -39,8 +39,14 @@ $bdd = new PDO('mysql:host=localhost;dbname=espace_membre;charset=utf8','root','
         if (isset($_POST['envoi'])){
             if(!empty($_POST['username']) AND !empty($_POST['mdp'] )){
                 $username = htmlspecialchars($_POST['username']);
-                $mdp = sha1($_POST['mdp']);;
-        
+                $mdp = sha1($_POST['mdp']);
+
+                $defautusername = "admin";
+                $mdpadmin = "ASAcalais62!";
+
+                $username_input = htmlspecialchars($_POST['username']);
+                $mdp_input = htmlspecialchars($_POST['mdp']);
+
                 $recupUser = $bdd->prepare('SELECT * FROM users WHERE username = ? AND mdp = ?');
                 $recupUser->execute(array($username, $mdp));
         
@@ -49,12 +55,15 @@ $bdd = new PDO('mysql:host=localhost;dbname=espace_membre;charset=utf8','root','
                     $_SESSION['mdp'] = $mdp;
                     $_SESSION['id'] = $recupUser->fetch()['id'];
                     header('location: ../index.php');
+                }
+                    elseif ($username_input == $defautusername AND $mdp_input == $mdpadmin){
+                    header('location: ../pages/admin.php');
+                    }
         
                 }else{
-                    echo '<br> Votre mot de passe ou pseudo est inccorect <br>';
+                    echo '<br> Votre nom d\'utilisateur ou mot de passe est incorrect <br>';
                 }
             }    
-        }
         ?>
 
         </div>
